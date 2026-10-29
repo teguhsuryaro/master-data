@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --brand-primary: #F79721;
+  --brand-primary-hover: #E07F0B;
+  --brand-primary-soft: #FFF7ED;
+  --brand-primary-selected: #FFF0DB;
+  --brand-primary-border: #FED7AA;
+  --surface-canvas: #FFFFFF;
+  --surface-muted: #F4F5F7;
+  --surface-card: #FFFFFF;
+  --industrial-carbon: #18181B;
+  --text-primary: #18181B;
+  --text-secondary: #6B7280;
+  --text-muted: #9CA3AF;
+  --border-structural: #F3F4F6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--text-primary);
+  background-color: var(--surface-canvas);
+  font-family: var(--font-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Tabular figures for accounting data and mono codes */
+.font-mono,
+code,
+pre,
+.tabular-nums {
+  font-feature-settings: "tnum";
+  font-variant-numeric: tabular-nums;
+}
+
+/* Hide scrollbar for clean horizontal pills */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Custom subtle scrollbars for Clean Drive Workspace */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #E5E7EB;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #D1D5DB;
+}

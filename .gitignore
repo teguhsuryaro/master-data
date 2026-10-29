@@ -1,0 +1,75 @@
+# ================================================================
+# SIAKUN KANAL TIGA — GITIGNORE CONFIGURATION
+# Melindungi kredensial rahasia & file temporer agar tidak ter-push
+# ================================================================
+
+# 1. Kredensial & Lingkungan Sensitif (Database URL, JWT Secret, Token)
+.env
+.env*.local
+.env.development
+.env.test
+.env.production
+*.env
+# Pengecualian: .env.example tetap di-commit sebagai panduan setup tim/dosen
+!.env.example
+
+# 2. Dependensi Node.js & Package Managers
+/node_modules
+/.pnp
+.pnp.js
+.pnpm-store
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+
+# 3. Hasil Build & Kompilasi Next.js
+/.next/
+/out/
+/build
+/dist
+*.tsbuildinfo
+next-env.d.ts
+
+# 4. Berkas Log & Debugging
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# 5. Pengujian & Coverage
+/coverage
+/.nyc_output
+
+# 6. Konfigurasi Platform Deployment
+/.vercel
+
+# 7. Sertifikat, Kunci Kriptografi & Token Keamanan
+*.pem
+*.key
+*.cert
+*.crt
+*.pfx
+*.p12
+
+# 8. Berkas Sampah Sistem Operasi
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+[Dd]esktop.ini
+
+# 9. Berkas Editor & IDE Lokal (Pengaturan Pribadi Pengembang)
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+*.sublime-workspace
+*.sublime-project
+*.swp
+*.swo
+*~
